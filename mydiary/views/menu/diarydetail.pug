@@ -1,0 +1,15 @@
+extends ../layout
+
+block content 
+    link(rel="stylesheet", href="/css/diarydetail.css")
+    script(src="/js/diarylist.js")
+    div.detail
+        p 작성일 : #{diary.d_date}
+        p 요일 : #{diary.d_time}
+        img(src= `/images/${diary.d_image}`,width="200px")
+        p 제목 : #{diary.d_subject}
+        p 내용 : #{diary.d_content}
+    form(action="")
+        input.back(type="button",value="리스트로")
+        input.update(type="button",value="수정" data-seq =`${diary.d_seq}`)
+        input.delete(type="button",value="삭제" data-seq=`${diary.d_seq}`) 

@@ -1,0 +1,25 @@
+doctype html
+html(lang="ko")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta( name='viewport', content='width=device-width, initial-scale=1')
+    title= title
+    link(rel='stylesheet', href='/css/main.css')
+    script(src="/js/main.js")
+  body
+    header 
+      h1 추억기록
+    nav.main
+      ul 
+        li 일기장
+        li 육아일기
+        li 나의목표
+        li 반려동물일기
+        if user
+          li 작성하기
+          li 로그아웃
+        else  
+          li 로그인
+          li 회원가입
+    block content

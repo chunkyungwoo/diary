@@ -1,0 +1,21 @@
+extends ../layout
+
+block content 
+    link(rel="stylesheet", href="/css/diary.css")
+    script(src="/js/diary.js")
+    article 
+        if user 
+            p=user.m_name 
+            strong 의 일기장
+        section.main
+            div 
+                form.date
+                    input.todate(type="text", name="d_date" value=row ?row.d_date:`${toDate}`)
+                    input.totime(type="text",placeholder="요일",name="d_time" value= row ?row.d_time :"")
+                    input.list(type="button",value="일기장리스트")
+                form.input(method="POST",enctype="multipart/form-data")
+                    input.imagef(type="file",name="d_image",accept="image/*")
+                    img.image(src= image ? `/images/${image}`:"/images/noImage.svg",width="200px",height="200px")
+                    input.subject(type="text",placeholder="제목",name="d_subject" value=row ?`${row.d_subject}`:"")
+                    textarea.content(name="d_content", cols="50", rows="10") #{row ? row.d_content:""} 
+                    input.btn_save(type="button",value="저장")

@@ -1,0 +1,17 @@
+extends ../layout
+
+block content 
+    link(rel="stylesheet", href="/css/diarylist.css")
+    script(src="/js/diarylist.js")
+    form
+        input.btn(type="button",value="작성하기")
+        div 
+            ul.diary
+                if list 
+                    each DIARY in list
+                        li.diary.list(data-seq=`${DIARY.d_seq}`)
+                            if DIARY.d_image
+                                img.list.image(src=`/images/${DIARY.d_image}`, width="30px")
+                            else 
+                                img.list.image(src="/images/noImage.svg", width="30px")
+                        span.list.image= DIARY.d_subject

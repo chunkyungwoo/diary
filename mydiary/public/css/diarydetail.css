@@ -1,0 +1,43 @@
+.detail {
+  height: 500px;
+  max-width: 800px; /* 디테일 내용의 최대 너비를 설정합니다. */
+  margin: 25px auto 0; /* 가운데 정렬을 위해 좌우 여백을 자동으로 조절합니다. */
+  padding: 20px; /* 내용 주위에 적절한 여백을 설정합니다. */
+  border: 1px solid #ccc; /* 테두리를 추가합니다. */
+  border-radius: 10px; /* 둥근 테두리를 만듭니다. */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과를 추가합니다. */
+  background-color: #f9f9f9; /* 배경색을 설정합니다. */
+}
+.detail p {
+  text-align: center;
+  margin-bottom: 10px; /* 문단 사이에 간격을 설정합니다. */
+}
+.detail img {
+  display: block; /* 이미지를 블록 요소로 변경하여 주변에 텍스트가 감싸이지 않도록 합니다. */
+  margin: 0 auto; /* 이미지를 가운데 정렬합니다. */
+}
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 1rem;
+  input {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 1rem;
+    width: 10%;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 3px 0 2px 6px;
+    &:nth-of-type(1) {
+      margin-right: 332px;
+    }
+    &:hover {
+      cursor: pointer;
+      opacity: 0.7;
+      background-color: #ddd;
+    }
+  }
+}
